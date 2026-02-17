@@ -1,2 +1,7 @@
 /home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/src/test/java/hellocucumber/RunCucumberTest.java
 /home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/src/test/java/hellocucumber/StepDefinitions.java
+/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/src/test/java/hellocucumber/steps/CommonSteps.java
+/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/src/test/java/hellocucumber/steps/Kaikille.java
+/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/src/test/java/hellocucumber/steps/LoginSteps.java
+/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/src/test/java/hellocucumber/steps/RekisterointiSteps.java
+/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/src/test/java/hellocucumber/steps/VarausSteps.java
