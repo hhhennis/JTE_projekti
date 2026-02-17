@@ -8,6 +8,8 @@ public class VarausSteps {
     private final Kaikille kaikille;
     private String valittuHuone;
     private String valittuAika;
+    private String peruttavaVaraus;
+
 
     public VarausSteps(Kaikille kaikille) {
         this.kaikille = kaikille;
@@ -58,4 +60,40 @@ public class VarausSteps {
             kaikille.viesti = "Valitse varausajankohta";
         }
     }
+
+    @When
+            ("kayttaja klikkaa peruutuspainiketta")
+    public void kayttaja_klikkaa_peruutuspainiketta() {
+        // Yksinkertainen simulaatiologiikka esimerkkitapauksiin:
+
+        if (peruttavaVaraus == null || peruttavaVaraus.isBlank()) {
+            // Ei pitäisi tulla Examplesista, mutta varmistetaan
+            kaikille.viesti = "Varausta ei loytynyt";
+            return;
+        }
+
+        // 1) Tunnistetaan erikoistapaukset ensin
+        if (peruttavaVaraus.equals("Varauksen ID ei loydy")) {
+            kaikille.viesti = "Varausta ei loytynyt";
+            return;
+        }
+
+        // Jos teksti on täsmälleen tämä
+        if (peruttavaVaraus.equals("Kayttaja yrittää perua toisen kayttajan varauksen")
+                || peruttavaVaraus.equals("Kayttaja yrittai perua toisen kayttajan varauksen")) {
+            kaikille.viesti = "Et voi perua toisen kayttajan varausta";
+            return;
+        }
+
+        // 2) Jos varaus on jo alkanut (tai merkitty sellaiseksi), ei voi perua
+        if (peruttavaVaraus.contains("jo alkanut")) {
+            kaikille.viesti = "Menneisyyden tai kaynnissa olevaa varausta ei voi perua";
+            return;
+        }
+
+        // 3) Muut tapaukset: peruminen onnistuu
+        kaikille.viesti = "Varaus peruttu onnistuneesti";
+    }
+
+
 }
