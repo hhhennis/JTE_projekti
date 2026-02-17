@@ -12,6 +12,6 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @IncludeEngines("cucumber")
 @SelectPackages("hellocucumber")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "hellocucumber")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "hellocucumber.steps")
 public class RunCucumberTest {
 }
