@@ -61,27 +61,20 @@ public class VarausSteps {
         }
     }
 
-    @When
-            ("kayttaja klikkaa peruutuspainiketta")
+
+    @When("kayttaja valitsee peruttavan varauksen {string}")
+    public void kayttaja_valitsee_peruttavan_varauksen(String varaus) {
+        this.peruttavaVaraus = varaus;
+    }
+
+
+    @When("kayttaja klikkaa peruutuspainiketta")
     public void kayttaja_klikkaa_peruutuspainiketta() {
         // Yksinkertainen simulaatiologiikka esimerkkitapauksiin:
 
         if (peruttavaVaraus == null || peruttavaVaraus.isBlank()) {
             // Ei pitäisi tulla Examplesista, mutta varmistetaan
             kaikille.viesti = "Varausta ei loytynyt";
-            return;
-        }
-
-        // 1) Tunnistetaan erikoistapaukset ensin
-        if (peruttavaVaraus.equals("Varauksen ID ei loydy")) {
-            kaikille.viesti = "Varausta ei loytynyt";
-            return;
-        }
-
-        // Jos teksti on täsmälleen tämä
-        if (peruttavaVaraus.equals("Kayttaja yrittää perua toisen kayttajan varauksen")
-                || peruttavaVaraus.equals("Kayttaja yrittai perua toisen kayttajan varauksen")) {
-            kaikille.viesti = "Et voi perua toisen kayttajan varausta";
             return;
         }
 

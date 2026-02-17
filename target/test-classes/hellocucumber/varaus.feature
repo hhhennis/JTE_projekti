@@ -22,5 +22,18 @@ Scenario Outline: Varaus epaonnistuu puuttuvan valinnan takia
 Examples:
   | huone_tai_aika | puuttuva | tulos                           |
   | A101           | aika     | Valitse varausajankohta         |
-  | 10:00-11:00    | huone    | Valitse huone                   |
+  | 10:00c11:00    | huone    | Valitse huone                   |
   |                | molemmat | Valitse huone ja varausajankohta|
+
+
+Scenario Outline: Varauksen peruminen
+    When kayttaja valitsee peruttavan varauksen "<varaus>"
+    And kayttaja klikkaa peruutuspainiketta
+    Then kayttajalle naytetaan viesti "<tulos>"
+
+Examples:
+  | varaus                           | tulos                                                     |
+  | Kokoushuone A 09:00-10:00        | Varaus peruttu onnistuneesti                              |
+  | Kokoushuone B 11:00-12:00        | Varaus peruttu onnistuneesti                              |
+  | Auditorio 13:00-14:00 (jo alkanut)| Menneisyyden tai kaynnissa olevaa varausta ei voi perua  |
+  | Kokoushuone C 15:00-16:00        | Varaus peruttu onnistuneesti                              |
