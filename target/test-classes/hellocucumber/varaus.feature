@@ -9,9 +9,9 @@ Scenario Outline: uuden varauksen tekeminen
   Then kayttajalle naytetaan viesti "<tulos>"
 
 Examples:
-  | huone | aika        | tila    | tulos              |
-  | A101  | 10:00-11:00 | vapaa   | Varaus onnistui    |
-  | A101  | 10:00-11:00 | varattu | Huone ei ole vapaa |
+  | huone | aika       | tila    | tulos              |
+  | A100  | 2026-01-10 | vapaa   | Varaus onnistui    |
+  | A100  |            | varattu | Huone ei ole vapaa |
 
 
 Scenario Outline: Varaus epaonnistuu puuttuvan valinnan takia
@@ -20,20 +20,21 @@ Scenario Outline: Varaus epaonnistuu puuttuvan valinnan takia
   Then kayttajalle naytetaan viesti "<tulos>"
 
 Examples:
-  | huone_tai_aika | puuttuva | tulos                           |
-  | A101           | aika     | Valitse varausajankohta         |
-  | 10:00c11:00    | huone    | Valitse huone                   |
-  |                | molemmat | Valitse huone ja varausajankohta|
+  | huone_tai_aika | puuttuva | tulos                            |
+  | A100           | aika     | Valitse varausajankohta          |
+  | 2026-01-10     | huone    | Valitse huone                    |
+  |                | molemmat | Valitse huone ja varausajankohta |
 
 
 Scenario Outline: Varauksen peruminen
     When kayttaja valitsee peruttavan varauksen "<varaus>"
+    And varaus on tilassa "<tila>"
     And kayttaja klikkaa peruutuspainiketta
     Then kayttajalle naytetaan viesti "<tulos>"
 
 Examples:
-  | varaus                           | tulos                                                     |
-  | Kokoushuone A 09:00-10:00        | Varaus peruttu onnistuneesti                              |
-  | Kokoushuone B 11:00-12:00        | Varaus peruttu onnistuneesti                              |
-  | Auditorio 13:00-14:00 (jo alkanut)| Menneisyyden tai kaynnissa olevaa varausta ei voi perua  |
-  | Kokoushuone C 15:00-16:00        | Varaus peruttu onnistuneesti                              |
+  | varaus          | tila       | tulos                                                     |
+  | A100 2026-01-10 | tulossa    | Varaus peruttu onnistuneesti                              |
+  | A101 2026-01-11 | tulossa    | Varaus peruttu onnistuneesti                              |
+  | A102 2026-01-12 | kaynnissa  | Kaynnissa olevaa varausta ei voi perua  |
+  | A103 2026-01-13 | mennyt     | Mennytta varausta ei voi perua  |

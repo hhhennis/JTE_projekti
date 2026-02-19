@@ -9,7 +9,7 @@ public class VarausSteps {
     private String valittuHuone;
     private String valittuAika;
     private String peruttavaVaraus;
-
+    private String varauksenTila; // ✅ uusi
 
     public VarausSteps(Kaikille kaikille) {
         this.kaikille = kaikille;
@@ -19,6 +19,8 @@ public class VarausSteps {
     public void kayttaja_on_varaussivulla() {
         valittuHuone = null;
         valittuAika = null;
+        peruttavaVaraus = null;
+        varauksenTila = null;
     }
 
     @When("kayttaja valitsee {string} ja varauksen {string}")
@@ -36,11 +38,12 @@ public class VarausSteps {
         }
     }
 
-    // Uusi skenaario: vain toinen valittu / puuttuu
+
     @When("kayttaja valitsee {string}")
     public void kayttaja_valitsee_arvon(String arvo) {
         if (arvo == null || arvo.isBlank()) return;
-        if (arvo.contains(":")) {
+
+        if (arvo.matches("\\d{4}-\\d{2}-\\d{2}")) {
             this.valittuAika = arvo;
         } else {
             this.valittuHuone = arvo;
@@ -62,31 +65,31 @@ public class VarausSteps {
     }
 
 
+
     @When("kayttaja valitsee peruttavan varauksen {string}")
     public void kayttaja_valitsee_peruttavan_varauksen(String varaus) {
         this.peruttavaVaraus = varaus;
     }
 
+    @When("varaus on tilassa {string}")
+    public void varaus_on_tilassa(String tila) {
+        this.varauksenTila = tila;
+    }
 
     @When("kayttaja klikkaa peruutuspainiketta")
     public void kayttaja_klikkaa_peruutuspainiketta() {
-        // Yksinkertainen simulaatiologiikka esimerkkitapauksiin:
 
         if (peruttavaVaraus == null || peruttavaVaraus.isBlank()) {
-            // Ei pitäisi tulla Examplesista, mutta varmistetaan
             kaikille.viesti = "Varausta ei loytynyt";
             return;
         }
 
-        // 2) Jos varaus on jo alkanut (tai merkitty sellaiseksi), ei voi perua
-        if (peruttavaVaraus.contains("jo alkanut")) {
-            kaikille.viesti = "Menneisyyden tai kaynnissa olevaa varausta ei voi perua";
-            return;
+        if ("tulossa".equalsIgnoreCase(varauksenTila)) {
+            kaikille.viesti = "Varaus peruttu onnistuneesti";
+        } else if ("kaynnissa".equalsIgnoreCase(varauksenTila)) {
+            kaikille.viesti = "Kaynnissa olevaa varausta ei voi perua";
+        } else if ("mennyt".equalsIgnoreCase(varauksenTila)) {
+            kaikille.viesti = "Mennytta varausta ei voi perua";
         }
-
-        // 3) Muut tapaukset: peruminen onnistuu
-        kaikille.viesti = "Varaus peruttu onnistuneesti";
     }
-
-
 }
