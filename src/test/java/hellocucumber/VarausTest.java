@@ -78,5 +78,36 @@ public class VarausTest {
 
 
     }
+
+
+    @Test
+    void varauksen_Peruminen_Onnistuu() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru("A101", "26-03-01","tulossa");
+
+        assertEquals("Varaus peruttu onnistuneesti", perumisenTulos);
+    }
+
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_TilaKaynnissa() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru("A101", "26-03-01","kaynnissa");
+
+        assertEquals("Kaynnissa olevaa varausta ei voi perua", perumisenTulos);
+    }
+
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_TilaMennyt() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru("A101", "26-01-01","mennyt");
+
+        assertEquals("Mennytta varausta ei voi perua", perumisenTulos);
+    }
+
+
+
 }
 
