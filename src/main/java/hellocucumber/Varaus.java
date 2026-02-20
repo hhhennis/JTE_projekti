@@ -21,7 +21,28 @@ public class Varaus {
     }
 
     public String peru(String huone, String aika, String tila){
-        return "";
+
+        String peruutus = "";
+
+        if(((huone==null)||(huone==""))){
+
+            peruutus = "Valitse huone";
+        }
+        if((aika==null)||(aika=="")){
+            peruutus = "Valitse varausajankohta";
+        }
+        if(((huone==null)||(huone==""))&&((aika==null)||(aika==""))){
+            peruutus = "Valitse huone ja varausajankohta";
+        }
+        if (tila=="tulossa"){
+            peruutus = "Varaus peruttu onnistuneesti";
+        } else if (tila=="kaynnissa"){
+            peruutus = "Kaynnissa olevaa varausta ei voi perua";
+        } else if (tila=="mennyt"){
+            peruutus = "Mennytta varausta ei voi perua";
+        }
+
+        return peruutus;
     }
 
 }
