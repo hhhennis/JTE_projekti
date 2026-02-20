@@ -20,4 +20,8 @@ public class Varaus {
 
     }
 
+    public String peru(String huone, String aika, String tila){
+        return "";
+    }
+
 }
