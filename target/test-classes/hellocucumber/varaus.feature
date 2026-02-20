@@ -27,14 +27,18 @@ Examples:
 
 
 Scenario Outline: Varauksen peruminen
-    When kayttaja valitsee peruttavan varauksen "<varaus>"
+    When kayttaja valitsee peruttavan varauksen huoneen "<huone>" paivalle "<aika>"
     And varaus on tilassa "<tila>"
     And kayttaja klikkaa peruutuspainiketta
     Then kayttajalle naytetaan viesti "<tulos>"
 
 Examples:
-  | varaus          | tila       | tulos                                                     |
-  | A100 2026-01-10 | tulossa    | Varaus peruttu onnistuneesti                              |
-  | A101 2026-01-11 | tulossa    | Varaus peruttu onnistuneesti                              |
-  | A102 2026-01-12 | kaynnissa  | Kaynnissa olevaa varausta ei voi perua  |
-  | A103 2026-01-13 | mennyt     | Mennytta varausta ei voi perua  |
+  | huone | aika       | tila      | tulos                                  |
+  | A100  | 2026-01-10 | tulossa   | Varaus peruttu onnistuneesti           |
+  | A101  | 2026-01-11 | tulossa   | Varaus peruttu onnistuneesti           |
+  | A102  | 2026-01-12 | kaynnissa | Kaynnissa olevaa varausta ei voi perua |
+  | A103  | 2026-01-13 | mennyt    | Mennytta varausta ei voi perua         |
+  |       | 2026-01-14 | tulossa   | Valitse huone                          |
+  | A104  |            | tulossa   | Valitse varausajankohta                |
+  |       |            | tulossa   | Valitse huone ja varausajankohta       |
+

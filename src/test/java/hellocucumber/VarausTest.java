@@ -107,6 +107,60 @@ public class VarausTest {
         assertEquals("Mennytta varausta ei voi perua", perumisenTulos);
     }
 
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_HuonePuuttuu() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru("", "26-01-01",null);
+
+        assertEquals("Valitse huone", perumisenTulos);
+    }
+
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_AikaPuuttuu() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru("A101", "",null);
+
+        assertEquals("Valitse varausajankohta", perumisenTulos);
+    }
+
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_HuoneJaAikaPuuttuu() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru("", "",null);
+
+        assertEquals("Valitse huone ja varausajankohta", perumisenTulos);
+    }
+
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_HuoneNull() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru(null, "26-01-01",null);
+
+        assertEquals("Valitse huone", perumisenTulos);
+    }
+
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_AikaNull() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru("A101", null,null);
+
+        assertEquals("Valitse varausajankohta", perumisenTulos);
+    }
+
+    @Test
+    void varauksen_Peruminen_Epaonnistuu_Kun_HuoneJaAikaNull() {
+        Varaus varaus = new Varaus();
+
+        String perumisenTulos = varaus.peru(null, null,null);
+
+        assertEquals("Valitse huone ja varausajankohta", perumisenTulos);
+    }
+
 
 
 }

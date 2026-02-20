@@ -8,8 +8,9 @@ public class VarausSteps {
     private final Kaikille kaikille;
     private String valittuHuone;
     private String valittuAika;
-    private String peruttavaVaraus;
-    private String varauksenTila; // ✅ uusi
+    private String varauksenTila;
+    private String peruttavaHuone;
+    private String peruttavaAika;
 
     public VarausSteps(Kaikille kaikille) {
         this.kaikille = kaikille;
@@ -19,7 +20,8 @@ public class VarausSteps {
     public void kayttaja_on_varaussivulla() {
         valittuHuone = null;
         valittuAika = null;
-        peruttavaVaraus = null;
+        peruttavaAika = null;
+        peruttavaHuone = null;
         varauksenTila = null;
     }
 
@@ -66,9 +68,10 @@ public class VarausSteps {
 
 
 
-    @When("kayttaja valitsee peruttavan varauksen {string}")
-    public void kayttaja_valitsee_peruttavan_varauksen(String varaus) {
-        this.peruttavaVaraus = varaus;
+    @When("kayttaja valitsee peruttavan varauksen huoneen {string} paivalle {string}")
+    public void kayttaja_valitsee_peruttavan_varauksen(String huone, String aika) {
+        this.peruttavaHuone = huone;
+        this.peruttavaAika = aika;
     }
 
     @When("varaus on tilassa {string}")
@@ -79,17 +82,34 @@ public class VarausSteps {
     @When("kayttaja klikkaa peruutuspainiketta")
     public void kayttaja_klikkaa_peruutuspainiketta() {
 
-        if (peruttavaVaraus == null || peruttavaVaraus.isBlank()) {
-            kaikille.viesti = "Varausta ei loytynyt";
+        if ((peruttavaHuone == null || peruttavaHuone.isBlank()) &&
+                (peruttavaAika == null || peruttavaAika.isBlank())) {
+            kaikille.viesti = "Valitse huone ja varausajankohta";
             return;
         }
 
-        if ("tulossa".equalsIgnoreCase(varauksenTila)) {
-            kaikille.viesti = "Varaus peruttu onnistuneesti";
-        } else if ("kaynnissa".equalsIgnoreCase(varauksenTila)) {
-            kaikille.viesti = "Kaynnissa olevaa varausta ei voi perua";
-        } else if ("mennyt".equalsIgnoreCase(varauksenTila)) {
-            kaikille.viesti = "Mennytta varausta ei voi perua";
+        if (peruttavaHuone == null || peruttavaHuone.isBlank()) {
+            kaikille.viesti = "Valitse huone";
+            return;
+        }
+
+        if (peruttavaAika == null || peruttavaAika.isBlank()) {
+            kaikille.viesti = "Valitse varausajankohta";
+            return;
+        }
+
+        switch (varauksenTila.toLowerCase()) {
+            case "tulossa":
+                kaikille.viesti = "Varaus peruttu onnistuneesti";
+                break;
+
+            case "kaynnissa":
+                kaikille.viesti = "Kaynnissa olevaa varausta ei voi perua";
+                break;
+
+            case "mennyt":
+                kaikille.viesti = "Mennytta varausta ei voi perua";
+                break;
         }
     }
 }
