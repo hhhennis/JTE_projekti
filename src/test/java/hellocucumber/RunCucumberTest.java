@@ -15,6 +15,3 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "hellocucumber.steps")
 public class RunCucumberTest {
 }
-
-// testi testi testi t.evita evitan omasta branchista :D
-//terhikin testaa jee :)

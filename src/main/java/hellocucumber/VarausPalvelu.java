@@ -9,13 +9,13 @@ public class VarausPalvelu {
     private List<Varaus> varausLista = new ArrayList<>();
 
     public VarausPalvelu() {
-        varausLista.add(new Varaus("A100", LocalDate.now().minusDays(10)));
-        varausLista.add(new Varaus("A120", LocalDate.now().plusDays(2)));
-        varausLista.add(new Varaus("A140", LocalDate.now()));
+        varausLista.add(new Varaus("A100", LocalDate.now().minusDays(10), "Testi", "t@test.fi", "040"));
+        varausLista.add(new Varaus("A120", LocalDate.now().plusDays(2), "Testi", "t@test.fi", "040"));
+        varausLista.add(new Varaus("A140", LocalDate.now(), "Testi", "t@test.fi", "040"));
     }
 
     private boolean tyhja(String s) {
-        return s == null || s.isEmpty();
+        return s == null || s.isBlank();
     }
 
     private String laskeTila(LocalDate aika) {
@@ -24,24 +24,29 @@ public class VarausPalvelu {
         return "tulossa";
     }
 
-    private Varaus haeVaraus(String huone, LocalDate aika) {
+    public Varaus haeVaraus(String huone, LocalDate aika) {
         return varausLista.stream()
                 .filter(v -> v.getHuone().equals(huone) && v.getAika().equals(aika))
                 .findFirst()
                 .orElse(null);
     }
 
-    public String varaa(String huoneStr, String aikaStr) {
+    public String varaa(String huoneStr, String aikaStr,
+                        String nimi, String email, String puhelin) {
 
         if (tyhja(huoneStr) && tyhja(aikaStr)) return "Valitse huone ja varausajankohta";
         if (tyhja(huoneStr)) return "Valitse huone";
         if (tyhja(aikaStr)) return "Valitse varausajankohta";
+        if (tyhja(nimi)) return "Lisaa varaajan nimi";
+        if (tyhja(email)) return "Lisaa sahkoposti";
+        if (tyhja(puhelin)) return "Lisaa puhelinnumero";
 
         LocalDate aika = LocalDate.parse(aikaStr);
 
+        // tarkista onko huone + aika jo varattu
         if (haeVaraus(huoneStr, aika) != null) return "Huone ei ole vapaa";
 
-        varausLista.add(new Varaus(huoneStr, aika));
+        varausLista.add(new Varaus(huoneStr, aika, nimi, email, puhelin));
         return "Varaus onnistui";
     }
 

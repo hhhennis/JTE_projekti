@@ -1,13 +1,25 @@
 package hellocucumber.steps;
 
+import hellocucumber.VarausPalvelu;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+
+import java.time.LocalDate;
 
 public class VarausSteps {
 
     private final Kaikille kaikille;
+    private VarausPalvelu palvelu;
+
     private String valittuHuone;
     private String valittuAika;
+    private String nimi;
+    private String email;
+    private String puhelin;
+    private String valittuNimi;
+    private String valittuEmail;
+    private String valittuPuhelin;
+
     private String varauksenTila;
     private String peruttavaHuone;
     private String peruttavaAika;
@@ -18,11 +30,17 @@ public class VarausSteps {
 
     @Given("kayttaja on varaussivulla")
     public void kayttaja_on_varaussivulla() {
+        palvelu = new VarausPalvelu();
         valittuHuone = null;
         valittuAika = null;
-        peruttavaAika = null;
+        valittuNimi = null;
+        valittuEmail = null;
+        valittuPuhelin = null;
         peruttavaHuone = null;
-        varauksenTila = null;
+        peruttavaAika = null;
+        nimi = null;
+        email = null;
+        puhelin = null;
     }
 
     @When("kayttaja valitsee {string} ja varauksen {string}")
@@ -31,85 +49,64 @@ public class VarausSteps {
         this.valittuAika = aika;
     }
 
+    @When("kayttaja antaa varaajan tiedot {string} {string} {string}")
+    public void kayttaja_antaa_tiedot(String nimi, String email, String puhelin) {
+        this.valittuNimi = nimi;
+        this.valittuEmail = email;
+        this.valittuPuhelin = puhelin;
+    }
+
     @When("{string} on {string} kayttajan valitsemana aikana {string}, kayttaja klikkaa varauspainiketta")
-    public void huone_on_tilassa(String huone, String tila, String aika) {
+    public void huone_on_tilassa(String huone, String tila, String aikaStr) {
         if ("vapaa".equalsIgnoreCase(tila)) {
-            kaikille.viesti = "Varaus onnistui";
+            kaikille.viesti = palvelu.varaa(huone, aikaStr, valittuNimi, valittuEmail, valittuPuhelin);
         } else {
+            if (palvelu.haeVaraus(huone, LocalDate.parse(aikaStr)) == null) {
+                palvelu.varaa(huone, aikaStr, "Testi", "test@test.fi", "0400000000");
+            }
             kaikille.viesti = "Huone ei ole vapaa";
         }
     }
 
-
-    @When("kayttaja valitsee {string}")
-    public void kayttaja_valitsee_arvon(String arvo) {
-        if (arvo == null || arvo.isBlank()) return;
-
-        if (arvo.matches("\\d{4}-\\d{2}-\\d{2}")) {
-            this.valittuAika = arvo;
-        } else {
-            this.valittuHuone = arvo;
-        }
-    }
-
-    @When("kayttajalta jaa valitsematta {string}")
-    public void kayttajalta_jaa_valitsematta(String puuttuva) {
-        boolean huonePuuttuu = (valittuHuone == null || valittuHuone.isBlank());
-        boolean aikaPuuttuu  = (valittuAika  == null || valittuAika.isBlank());
-
-        if ("molemmat".equalsIgnoreCase(puuttuva) || (huonePuuttuu && aikaPuuttuu)) {
-            kaikille.viesti = "Valitse huone ja varausajankohta";
-        } else if ("huone".equalsIgnoreCase(puuttuva) || huonePuuttuu) {
-            kaikille.viesti = "Valitse huone";
-        } else if ("aika".equalsIgnoreCase(puuttuva) || aikaPuuttuu) {
-            kaikille.viesti = "Valitse varausajankohta";
-        }
-    }
-
-
-
     @When("kayttaja valitsee peruttavan varauksen huoneen {string} paivalle {string}")
     public void kayttaja_valitsee_peruttavan_varauksen(String huone, String aika) {
-        this.peruttavaHuone = huone;
-        this.peruttavaAika = aika;
+        peruttavaHuone = huone;
+        peruttavaAika = aika;
     }
 
     @When("varaus on tilassa {string}")
     public void varaus_on_tilassa(String tila) {
-        this.varauksenTila = tila;
-    }
-
-    @When("kayttaja klikkaa peruutuspainiketta")
-    public void kayttaja_klikkaa_peruutuspainiketta() {
-
-        if ((peruttavaHuone == null || peruttavaHuone.isBlank()) &&
-                (peruttavaAika == null || peruttavaAika.isBlank())) {
-            kaikille.viesti = "Valitse huone ja varausajankohta";
-            return;
-        }
-
-        if (peruttavaHuone == null || peruttavaHuone.isBlank()) {
-            kaikille.viesti = "Valitse huone";
-            return;
-        }
+        if (peruttavaHuone == null || peruttavaHuone.isBlank()) return;
 
         if (peruttavaAika == null || peruttavaAika.isBlank()) {
+            // Ei voida luoda varauksia ilman päivämäärää
             kaikille.viesti = "Valitse varausajankohta";
             return;
         }
 
-        switch (varauksenTila.toLowerCase()) {
+        LocalDate aika;
+        switch (tila.toLowerCase()) {
             case "tulossa":
-                kaikille.viesti = "Varaus peruttu onnistuneesti";
+                aika = LocalDate.now().plusDays(1);
                 break;
-
             case "kaynnissa":
-                kaikille.viesti = "Kaynnissa olevaa varausta ei voi perua";
+                aika = LocalDate.now();
                 break;
-
             case "mennyt":
-                kaikille.viesti = "Mennytta varausta ei voi perua";
+                aika = LocalDate.now().minusDays(1);
                 break;
+            default:
+                aika = LocalDate.now();
         }
+
+        if (palvelu.haeVaraus(peruttavaHuone, aika) == null) {
+            palvelu.varaa(peruttavaHuone, aika.toString(), "Testi", "test@test.fi", "0400000000");
+        }
+        peruttavaAika = aika.toString();
+    }
+
+    @When("kayttaja klikkaa peruutuspainiketta")
+    public void kayttaja_klikkaa_peruutuspainiketta() {
+        kaikille.viesti = palvelu.peru(peruttavaHuone, peruttavaAika);
     }
 }
