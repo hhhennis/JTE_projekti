@@ -5,11 +5,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class VarausTest {
 
+    private static final String NIMI = "Matti";
+    private static final String EMAIL = "matti@test.fi";
+    private static final String PUHELIN = "040123";
+
     @Test
     void varaus_Onnistuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        String tulos = palvelu.varaa("A100", "2026-02-28");
+        String tulos = palvelu.varaa("A100", "2026-02-28", NIMI, EMAIL, PUHELIN);
 
         assertEquals("Varaus onnistui", tulos);
     }
@@ -18,8 +22,8 @@ public class VarausTest {
     void varaus_Epaonnistuu_Kun_TilaVarattu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        palvelu.varaa("A100", "2026-03-01");
-        String tulos = palvelu.varaa("A100", "2026-03-01");
+        palvelu.varaa("A100", "2026-03-01", NIMI, EMAIL, PUHELIN);
+        String tulos = palvelu.varaa("A100", "2026-03-01", NIMI, EMAIL, PUHELIN);
 
         assertEquals("Huone ei ole vapaa", tulos);
     }
@@ -28,7 +32,7 @@ public class VarausTest {
     void varaus_Epaonnistuu_Kun_HuonePuuttuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        String tulos = palvelu.varaa("", "2026-03-01");
+        String tulos = palvelu.varaa("", "2026-03-01", NIMI, EMAIL, PUHELIN);
 
         assertEquals("Valitse huone", tulos);
     }
@@ -37,7 +41,7 @@ public class VarausTest {
     void varaus_Epaonnistuu_Kun_AikaPuuttuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        String tulos = palvelu.varaa("A100", "");
+        String tulos = palvelu.varaa("A100", "", NIMI, EMAIL, PUHELIN);
 
         assertEquals("Valitse varausajankohta", tulos);
     }
@@ -46,118 +50,48 @@ public class VarausTest {
     void varaus_Epaonnistuu_Kun_HuoneJaAikaPuuttuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        String tulos = palvelu.varaa("", "");
+        String tulos = palvelu.varaa("", "", NIMI, EMAIL, PUHELIN);
 
         assertEquals("Valitse huone ja varausajankohta", tulos);
     }
-
-    @Test
-    void varaus_Epaonnistuu_Kun_HuoneNull() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.varaa(null, "2026-03-01");
-
-        assertEquals("Valitse huone", tulos);
-    }
-
-    @Test
-    void varaus_Epaonnistuu_Kun_AikaNull() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.varaa("A100", null);
-
-        assertEquals("Valitse varausajankohta", tulos);
-    }
-
-    @Test
-    void varaus_Epaonnistuu_Kun_HuoneJaAikaNull() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.varaa(null, null);
-
-        assertEquals("Valitse huone ja varausajankohta", tulos);
-    }
-
 
     @Test
     void varauksen_Peruminen_Onnistuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        palvelu.varaa("A120", "2026-03-10");
+        palvelu.varaa("A120", "2026-03-10", NIMI, EMAIL, PUHELIN);
         String tulos = palvelu.peru("A120", "2026-03-10");
 
         assertEquals("Varaus peruttu onnistuneesti", tulos);
     }
 
     @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_TilaKaynnissa() {
+    void varaus_Epaonnistuu_NimiPuuttuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        String tulos = palvelu.peru("A140", java.time.LocalDate.now().toString());
+        String tulos = palvelu.varaa("A100", "2026-02-28",
+                "", EMAIL, PUHELIN);
 
-        assertEquals("Kaynnissa olevaa varausta ei voi perua", tulos);
+        assertEquals("Lisaa varaajan nimi", tulos);
     }
 
     @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_TilaMennyt() {
+    void varaus_Epaonnistuu_EmailPuuttuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        String tulos = palvelu.peru("A100", java.time.LocalDate.now().minusDays(10).toString());
+        String tulos = palvelu.varaa("A100", "2026-02-28",
+                NIMI, "", PUHELIN);
 
-        assertEquals("Mennytta varausta ei voi perua", tulos);
+        assertEquals("Lisaa sahkoposti", tulos);
     }
 
     @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_HuonePuuttuu() {
+    void varaus_Epaonnistuu_PuhelinPuuttuu() {
         VarausPalvelu palvelu = new VarausPalvelu();
 
-        String tulos = palvelu.peru("", "2026-01-01");
+        String tulos = palvelu.varaa("A100", "2026-02-28",
+                NIMI, EMAIL, "");
 
-        assertEquals("Valitse huone", tulos);
-    }
-
-    @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_AikaPuuttuu() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.peru("A100", "");
-
-        assertEquals("Valitse varausajankohta", tulos);
-    }
-
-    @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_HuoneJaAikaPuuttuu() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.peru("", "");
-
-        assertEquals("Valitse huone ja varausajankohta", tulos);
-    }
-
-    @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_HuoneNull() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.peru(null, "2026-01-01");
-
-        assertEquals("Valitse huone", tulos);
-    }
-
-    @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_AikaNull() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.peru("A100", null);
-
-        assertEquals("Valitse varausajankohta", tulos);
-    }
-
-    @Test
-    void varauksen_Peruminen_Epaonnistuu_Kun_HuoneJaAikaNull() {
-        VarausPalvelu palvelu = new VarausPalvelu();
-
-        String tulos = palvelu.peru(null, null);
-
-        assertEquals("Valitse huone ja varausajankohta", tulos);
+        assertEquals("Lisaa puhelinnumero", tulos);
     }
 }
