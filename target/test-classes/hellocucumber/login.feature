@@ -14,7 +14,7 @@ Examples:
   |              | salasana   | Virheellinen kayttajanimi tai salasana|
   | kayttaja     |            | Virheellinen kayttajanimi tai salasana|
   | kayt         | salasana   | Virheellinen kayttajanimi tai salasana|
-  | kayttaja     | salsa      | Virheellinen kayttajanimi tai salasana|
+  | kayttaja     | sala       | Virheellinen kayttajanimi tai salasana|
   | kayttaja     | sssalasana | Virheellinen kayttajanimi tai salasana|
   | kkkkayttaja  | salasana   | Virheellinen kayttajanimi tai salasana|
   | ayttajaa     | alasanas   | Virheellinen kayttajanimi tai salasana|
