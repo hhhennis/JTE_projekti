@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="hellocucumber.RunCucumberTest" time="1.293" tests="26" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="hellocucumber.RunCucumberTest" time="2.32" tests="36" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="ANSI_X3.4-1968"/>
@@ -7,12 +7,13 @@
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Europe/Helsinki"/>
     <property name="os.name" value="Linux"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-amazon-corretto/lib"/>
-    <property name="sun.java.command" value="/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/surefire/surefirebooter-20260217212120119_3.jar /home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/surefire 2026-02-17T21-21-19_901-jvmRun1 surefire-20260217212120119_1tmp surefire_0-20260217212120119_2tmp"/>
+    <property name="sun.java.command" value="/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/surefire/surefirebooter-20260223130905128_3.jar /home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/surefire 2026-02-23T13-09-04_902-jvmRun1 surefire-20260223130905128_1tmp surefire_0-20260223130905128_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/test-classes:/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/classes:/home/hennak/.m2/repository/io/cucumber/cucumber-java/7.33.0/cucumber-java-7.33.0.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-core/7.33.0/cucumber-core-7.33.0.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-gherkin/7.33.0/cucumber-gherkin-7.33.0.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.33.0/cucumber-gherkin-messages-7.33.0.jar:/home/hennak/.m2/repository/io/cucumber/gherkin/36.1.0/gherkin-36.1.0.jar:/home/hennak/.m2/repository/io/cucumber/messages/30.1.0/messages-30.1.0.jar:/home/hennak/.m2/repository/io/cucumber/pretty-formatter/2.4.1/pretty-formatter-2.4.1.jar:/home/hennak/.m2/repository/io/cucumber/query/14.6.0/query-14.6.0.jar:/home/hennak/.m2/repository/io/cucumber/teamcity-formatter/0.2.0/teamcity-formatter-0.2.0.jar:/home/hennak/.m2/repository/io/cucumber/testng-xml-formatter/0.7.0/testng-xml-formatter-0.7.0.jar:/home/hennak/.m2/repository/io/cucumber/usage-formatter/0.1.0/usage-formatter-0.1.0.jar:/home/hennak/.m2/repository/io/cucumber/tag-expressions/8.1.0/tag-expressions-8.1.0.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-expressions/18.0.1/cucumber-expressions-18.0.1.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-json-formatter/0.3.2/cucumber-json-formatter-0.3.2.jar:/home/hennak/.m2/repository/io/cucumber/datatable/7.33.0/datatable-7.33.0.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-plugin/7.33.0/cucumber-plugin-7.33.0.jar:/home/hennak/.m2/repository/io/cucumber/docstring/7.33.0/docstring-7.33.0.jar:/home/hennak/.m2/repository/io/cucumber/html-formatter/22.2.0/html-formatter-22.2.0.jar:/home/hennak/.m2/repository/io/cucumber/junit-xml-formatter/0.11.0/junit-xml-formatter-0.11.0.jar:/home/hennak/.m2/repository/io/cucumber/ci-environment/12.0.0/ci-environment-12.0.0.jar:/home/hennak/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.33.0/cucumber-junit-platform-engine-7.33.0.jar:/home/hennak/.m2/repository/org/junit/platform/junit-platform-engine/1.14.1/junit-platform-engine-1.14.1.jar:/home/hennak/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/hennak/.m2/repository/org/junit/platform/junit-platform-commons/1.14.1/junit-platform-commons-1.14.1.jar:/home/hennak/.m2/repository/io/cucumber/cucumber-picocontainer/7.15.0/cucumber-picocontainer-7.15.0.jar:/home/hennak/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/home/hennak/.m2/repository/org/junit/jupiter/junit-jupiter/5.14.1/junit-jupiter-5.14.1.jar:/home/hennak/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.14.1/junit-jupiter-api-5.14.1.jar:/home/hennak/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.14.1/junit-jupiter-params-5.14.1.jar:/home/hennak/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.14.1/junit-jupiter-engine-5.14.1.jar:/home/hennak/.m2/repository/org/junit/platform/junit-platform-suite/1.14.1/junit-platform-suite-1.14.1.jar:/home/hennak/.m2/repository/org/junit/platform/junit-platform-suite-api/1.14.1/junit-platform-suite-api-1.14.1.jar:/home/hennak/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.14.1/junit-platform-suite-engine-1.14.1.jar:/home/hennak/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.14.1/junit-platform-suite-commons-1.14.1.jar:/home/hennak/.m2/repository/org/junit/platform/junit-platform-launcher/1.14.1/junit-platform-launcher-1.14.1.jar:/home/hennak/.m2/repository/org/assertj/assertj-core/3.27.6/assertj-core-3.27.6.jar:/home/hennak/.m2/repository/net/bytebuddy/byte-buddy/1.17.7/byte-buddy-1.17.7.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -25,9 +26,9 @@
     <property name="basedir" value="/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/surefire/surefirebooter-20260217212120119_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber/target/surefire/surefirebooter-20260223130905128_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.5+11-LTS"/>
     <property name="user.name" value="hennak"/>
@@ -41,6 +42,7 @@
     <property name="localRepository" value="/home/hennak/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-21/issues/"/>
     <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2024.3.1.1"/>
     <property name="java.version" value="21.0.5"/>
     <property name="user.dir" value="/home/hennak/Documents/Koulu/JTE/Projektityo/hellocucumber"/>
     <property name="os.arch" value="amd64"/>
@@ -54,7 +56,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.1" classname="RunCucumberTest" time="0.352">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.1" classname="RunCucumberTest" time="0.753">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla &amp#27;[90m# classpath:hellocucumber/login.feature:13&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                           &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -63,7 +65,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Tervetuloa, kayttaja!"&amp#27;[22m&amp#27;[39m      &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.2" classname="RunCucumberTest" time="0.023">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.2" classname="RunCucumberTest" time="0.02">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:14&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -72,7 +74,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.3" classname="RunCucumberTest" time="0.018">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.3" classname="RunCucumberTest" time="0.035">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:15&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -81,7 +83,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.4" classname="RunCucumberTest" time="0.021">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.4" classname="RunCucumberTest" time="0.046">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:16&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -90,7 +92,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.5" classname="RunCucumberTest" time="0.03">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.5" classname="RunCucumberTest" time="0.022">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:17&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -99,7 +101,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.6" classname="RunCucumberTest" time="0.018">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.6" classname="RunCucumberTest" time="0.029">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:18&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -108,7 +110,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.7" classname="RunCucumberTest" time="0.013">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.7" classname="RunCucumberTest" time="0.046">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:19&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -117,7 +119,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.8" classname="RunCucumberTest" time="0.017">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.8" classname="RunCucumberTest" time="0.012">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:20&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -126,7 +128,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.9" classname="RunCucumberTest" time="0.018">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.9" classname="RunCucumberTest" time="0.013">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:21&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -135,7 +137,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.10" classname="RunCucumberTest" time="0.022">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.10" classname="RunCucumberTest" time="0.013">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:22&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -144,7 +146,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.11" classname="RunCucumberTest" time="0.016">
+  <testcase name="Sisaankirjautuminen - Kirjautuminen kayttajatunnuksella ja salasanalla - Examples - Example #1.11" classname="RunCucumberTest" time="0.021">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Kirjautuminen kayttajatunnuksella ja salasanalla             &amp#27;[90m# classpath:hellocucumber/login.feature:23&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on kirjautumissivulla&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.LoginSteps.kayttaja_on_kirjautumissivulla()&amp#27;[39m
@@ -153,7 +155,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Virheellinen kayttajanimi tai salasana"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.1" classname="RunCucumberTest" time="0.025">
+  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.1" classname="RunCucumberTest" time="0.032">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Rekisteroityminen                                                            &amp#27;[90m# classpath:hellocucumber/rekisterointi.feature:13&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on rekisteroitymissivulla&amp#27;[39m                                                   &amp#27;[90m# hellocucumber.steps.RekisterointiSteps.kayttaja_on_rekisteroitymissivulla()&amp#27;[39m
@@ -162,7 +164,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Rekisteroityminen onnistui"&amp#27;[22m&amp#27;[39m                             &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.2" classname="RunCucumberTest" time="0.014">
+  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.2" classname="RunCucumberTest" time="0.03">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Rekisteroityminen                                                   &amp#27;[90m# classpath:hellocucumber/rekisterointi.feature:14&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on rekisteroitymissivulla&amp#27;[39m                                          &amp#27;[90m# hellocucumber.steps.RekisterointiSteps.kayttaja_on_rekisteroitymissivulla()&amp#27;[39m
@@ -171,7 +173,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Tayta puhelinnumero"&amp#27;[22m&amp#27;[39m                           &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.3" classname="RunCucumberTest" time="0.012">
+  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.3" classname="RunCucumberTest" time="0.016">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Rekisteroityminen                                                           &amp#27;[90m# classpath:hellocucumber/rekisterointi.feature:15&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on rekisteroitymissivulla&amp#27;[39m                                                  &amp#27;[90m# hellocucumber.steps.RekisterointiSteps.kayttaja_on_rekisteroitymissivulla()&amp#27;[39m
@@ -180,7 +182,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Rekisteroityminen onnistui"&amp#27;[22m&amp#27;[39m                            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.4" classname="RunCucumberTest" time="0.012">
+  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.4" classname="RunCucumberTest" time="0.025">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Rekisteroityminen                                                        &amp#27;[90m# classpath:hellocucumber/rekisterointi.feature:16&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on rekisteroitymissivulla&amp#27;[39m                                               &amp#27;[90m# hellocucumber.steps.RekisterointiSteps.kayttaja_on_rekisteroitymissivulla()&amp#27;[39m
@@ -189,7 +191,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Sahkopostiosoite ei kelpaa"&amp#27;[22m&amp#27;[39m                         &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.5" classname="RunCucumberTest" time="0.013">
+  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.5" classname="RunCucumberTest" time="0.026">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Rekisteroityminen                                                                   &amp#27;[90m# classpath:hellocucumber/rekisterointi.feature:17&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on rekisteroitymissivulla&amp#27;[39m                                                          &amp#27;[90m# hellocucumber.steps.RekisterointiSteps.kayttaja_on_rekisteroitymissivulla()&amp#27;[39m
@@ -198,7 +200,7 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Puhelinnumero ei kelpaa"&amp#27;[22m&amp#27;[39m                                       &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.6" classname="RunCucumberTest" time="0.017">
+  <testcase name="Rekisteroityminen - Rekisteroityminen - Examples - Example #1.6" classname="RunCucumberTest" time="0.024">
     <system-out><![CDATA[
 &amp#27;[1mScenario Outline:&amp#27;[22m Rekisteroityminen                                        &amp#27;[90m# classpath:hellocucumber/rekisterointi.feature:18&amp#27;[39m
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on rekisteroitymissivulla&amp#27;[39m                               &amp#27;[90m# hellocucumber.steps.RekisterointiSteps.kayttaja_on_rekisteroitymissivulla()&amp#27;[39m
@@ -207,85 +209,194 @@
   &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Tayta puhelinnumero"&amp#27;[22m&amp#27;[39m                &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Huonevaraus - uuden varauksen tekeminen - Examples - Example #1.1" classname="RunCucumberTest" time="0.023">
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.1" classname="RunCucumberTest" time="0.041">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen                                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:13&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                     &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A101"&amp#27;[22m ja varauksen &amp#27;[1m"10:00-11:00"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A101"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"10:00-11:00"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Varaus onnistui"&amp#27;[22m&amp#27;[39m                                                 &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:14&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A100"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-10"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A100"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-10"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Varaus onnistui"&amp#27;[22m&amp#27;[39m                                                &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Huonevaraus - uuden varauksen tekeminen - Examples - Example #1.2" classname="RunCucumberTest" time="0.011">
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.2" classname="RunCucumberTest" time="0.021">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen                                                               &amp#27;[90m# classpath:hellocucumber/varaus.feature:14&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                       &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A101"&amp#27;[22m ja varauksen &amp#27;[1m"10:00-11:00"&amp#27;[22m&amp#27;[39m                                              &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A101"&amp#27;[22m on &amp#27;[1m"varattu"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"10:00-11:00"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Huone ei ole vapaa"&amp#27;[22m&amp#27;[39m                                                &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                               &amp#27;[90m# classpath:hellocucumber/varaus.feature:15&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                      &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A100"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-10"&amp#27;[22m&amp#27;[39m                                              &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m                              &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A100"&amp#27;[22m on &amp#27;[1m"varattu"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-10"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Huone ei ole vapaa"&amp#27;[22m&amp#27;[39m                                               &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Huonevaraus - Varaus epaonnistuu puuttuvan valinnan takia - Examples - Example #1.1" classname="RunCucumberTest" time="0.01">
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.3" classname="RunCucumberTest" time="0.022">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m Varaus epaonnistuu puuttuvan valinnan takia   &amp#27;[90m# classpath:hellocucumber/varaus.feature:24&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                             &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A101"&amp#27;[22m&amp#27;[39m                               &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_arvon(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttajalta jaa valitsematta &amp#27;[1m"aika"&amp#27;[22m&amp#27;[39m                     &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttajalta_jaa_valitsematta(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse varausajankohta"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:16&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A101"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-11"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m""&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m                                 &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A101"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-11"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Lisaa varaajan nimi"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Huonevaraus - Varaus epaonnistuu puuttuvan valinnan takia - Examples - Example #1.2" classname="RunCucumberTest" time="0.01">
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.4" classname="RunCucumberTest" time="0.027">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m Varaus epaonnistuu puuttuvan valinnan takia &amp#27;[90m# classpath:hellocucumber/varaus.feature:25&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                           &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"10:00c11:00"&amp#27;[22m&amp#27;[39m                      &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_arvon(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttajalta jaa valitsematta &amp#27;[1m"huone"&amp#27;[22m&amp#27;[39m                  &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttajalta_jaa_valitsematta(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse huone"&amp#27;[22m&amp#27;[39m         &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:17&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A102"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-12"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m""&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m                                         &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A102"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-12"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Lisaa sahkoposti"&amp#27;[22m&amp#27;[39m                                               &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Huonevaraus - Varaus epaonnistuu puuttuvan valinnan takia - Examples - Example #1.3" classname="RunCucumberTest" time="0.027">
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.5" classname="RunCucumberTest" time="0.017">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m Varaus epaonnistuu puuttuvan valinnan takia            &amp#27;[90m# classpath:hellocucumber/varaus.feature:26&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                      &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m""&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_arvon(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttajalta jaa valitsematta &amp#27;[1m"molemmat"&amp#27;[22m&amp#27;[39m                          &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttajalta_jaa_valitsematta(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse huone ja varausajankohta"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:18&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A103"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-13"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m""&amp#27;[22m&amp#27;[39m                                      &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A103"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-13"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Lisaa puhelinnumero"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.1" classname="RunCucumberTest" time="0.017">
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.6" classname="RunCucumberTest" time="0.014">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                       &amp#27;[90m# classpath:hellocucumber/varaus.feature:36&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                         &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen &amp#27;[1m"Kokoushuone A 09:00-10:00"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                 &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Varaus peruttu onnistuneesti"&amp#27;[22m&amp#27;[39m        &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:19&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A104"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-14"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m""&amp#27;[22m &amp#27;[1m""&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m                                              &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A104"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-14"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Lisaa varaajan nimi"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.7" classname="RunCucumberTest" time="0.02">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:20&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A105"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-15"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m""&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m""&amp#27;[22m&amp#27;[39m                                           &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A105"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-15"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Lisaa varaajan nimi"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.8" classname="RunCucumberTest" time="0.017">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:21&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A106"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-16"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m""&amp#27;[22m &amp#27;[1m""&amp#27;[22m&amp#27;[39m                                                   &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A106"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-16"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Lisaa sahkoposti"&amp#27;[22m&amp#27;[39m                                               &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.9" classname="RunCucumberTest" time="0.014">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                             &amp#27;[90m# classpath:hellocucumber/varaus.feature:22&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                    &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A107"&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-17"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m""&amp#27;[22m &amp#27;[1m""&amp#27;[22m &amp#27;[1m""&amp#27;[22m&amp#27;[39m                                                        &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A107"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-17"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Lisaa varaajan nimi"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.10" classname="RunCucumberTest" time="0.013">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                         &amp#27;[90m# classpath:hellocucumber/varaus.feature:23&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                                &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m""&amp#27;[22m ja varauksen &amp#27;[1m"2026-01-18"&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m                        &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m""&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m"2026-01-18"&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse huone"&amp#27;[22m&amp#27;[39m                                              &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.11" classname="RunCucumberTest" time="0.016">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                                   &amp#27;[90m# classpath:hellocucumber/varaus.feature:24&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                          &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m"A108"&amp#27;[22m ja varauksen &amp#27;[1m""&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m                  &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m"A108"&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m""&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse varausajankohta"&amp#27;[22m&amp#27;[39m                              &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - uuden varauksen tekeminen eri syotteilla - Examples - Example #1.12" classname="RunCucumberTest" time="0.022">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m uuden varauksen tekeminen eri syotteilla                               &amp#27;[90m# classpath:hellocucumber/varaus.feature:25&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                      &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee &amp#27;[1m""&amp#27;[22m ja varauksen &amp#27;[1m""&amp#27;[22m&amp#27;[39m                                            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_ja_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja antaa varaajan tiedot &amp#27;[1m"Matti"&amp#27;[22m &amp#27;[1m"matti@test.fi"&amp#27;[22m &amp#27;[1m"0401234567"&amp#27;[22m&amp#27;[39m              &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_antaa_tiedot(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22m&amp#27;[1m""&amp#27;[22m on &amp#27;[1m"vapaa"&amp#27;[22m kayttajan valitsemana aikana &amp#27;[1m""&amp#27;[22m, kayttaja klikkaa varauspainiketta&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.huone_on_tilassa(java.lang.String,java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse huone ja varausajankohta"&amp#27;[22m&amp#27;[39m                 &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.1" classname="RunCucumberTest" time="0.013">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                                &amp#27;[90m# classpath:hellocucumber/varaus.feature:35&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                  &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen huoneen &amp#27;[1m"A100"&amp#27;[22m paivalle &amp#27;[1m"2026-01-10"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mvaraus on tilassa &amp#27;[1m"tulossa"&amp#27;[22m&amp#27;[39m                                                  &amp#27;[90m# hellocucumber.steps.VarausSteps.varaus_on_tilassa(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                          &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Varaus peruttu onnistuneesti"&amp#27;[22m&amp#27;[39m                 &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
   <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.2" classname="RunCucumberTest" time="0.011">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                       &amp#27;[90m# classpath:hellocucumber/varaus.feature:37&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                         &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen &amp#27;[1m"Kokoushuone B 11:00-12:00"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                 &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Varaus peruttu onnistuneesti"&amp#27;[22m&amp#27;[39m        &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                                &amp#27;[90m# classpath:hellocucumber/varaus.feature:36&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                  &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen huoneen &amp#27;[1m"A101"&amp#27;[22m paivalle &amp#27;[1m"2026-01-11"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mvaraus on tilassa &amp#27;[1m"tulossa"&amp#27;[22m&amp#27;[39m                                                  &amp#27;[90m# hellocucumber.steps.VarausSteps.varaus_on_tilassa(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                          &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Varaus peruttu onnistuneesti"&amp#27;[22m&amp#27;[39m                 &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
-  <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.3" classname="RunCucumberTest" time="0.015">
+  <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.3" classname="RunCucumberTest" time="0.012">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                                           &amp#27;[90m# classpath:hellocucumber/varaus.feature:38&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                             &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen &amp#27;[1m"Auditorio 13:00-14:00 (jo alkanut)"&amp#27;[22m&amp#27;[39m            &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                                     &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Menneisyyden tai kaynnissa olevaa varausta ei voi perua"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                                &amp#27;[90m# classpath:hellocucumber/varaus.feature:37&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                  &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen huoneen &amp#27;[1m"A102"&amp#27;[22m paivalle &amp#27;[1m"2026-01-12"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mvaraus on tilassa &amp#27;[1m"kaynnissa"&amp#27;[22m&amp#27;[39m                                                &amp#27;[90m# hellocucumber.steps.VarausSteps.varaus_on_tilassa(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                          &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Kaynnissa olevaa varausta ei voi perua"&amp#27;[22m&amp#27;[39m       &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
   <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.4" classname="RunCucumberTest" time="0.01">
     <system-out><![CDATA[
-&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                       &amp#27;[90m# classpath:hellocucumber/varaus.feature:39&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                         &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen &amp#27;[1m"Kokoushuone C 15:00-16:00"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String)&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                 &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
-  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Varaus peruttu onnistuneesti"&amp#27;[22m&amp#27;[39m        &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                                &amp#27;[90m# classpath:hellocucumber/varaus.feature:38&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                                  &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen huoneen &amp#27;[1m"A103"&amp#27;[22m paivalle &amp#27;[1m"2026-01-13"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mvaraus on tilassa &amp#27;[1m"mennyt"&amp#27;[22m&amp#27;[39m                                                   &amp#27;[90m# hellocucumber.steps.VarausSteps.varaus_on_tilassa(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                          &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Mennytta varausta ei voi perua"&amp#27;[22m&amp#27;[39m               &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.5" classname="RunCucumberTest" time="0.01">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                            &amp#27;[90m# classpath:hellocucumber/varaus.feature:39&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                              &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen huoneen &amp#27;[1m""&amp#27;[22m paivalle &amp#27;[1m"2026-01-14"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mvaraus on tilassa &amp#27;[1m"tulossa"&amp#27;[22m&amp#27;[39m                                              &amp#27;[90m# hellocucumber.steps.VarausSteps.varaus_on_tilassa(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                      &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse huone"&amp#27;[22m&amp#27;[39m                            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.6" classname="RunCucumberTest" time="0.019">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                      &amp#27;[90m# classpath:hellocucumber/varaus.feature:40&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                        &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen huoneen &amp#27;[1m"A104"&amp#27;[22m paivalle &amp#27;[1m""&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mvaraus on tilassa &amp#27;[1m"tulossa"&amp#27;[22m&amp#27;[39m                                        &amp#27;[90m# hellocucumber.steps.VarausSteps.varaus_on_tilassa(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                                &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse varausajankohta"&amp#27;[22m&amp#27;[39m            &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Huonevaraus - Varauksen peruminen - Examples - Example #1.7" classname="RunCucumberTest" time="0.016">
+    <system-out><![CDATA[
+&amp#27;[1mScenario Outline:&amp#27;[22m Varauksen peruminen                                    &amp#27;[90m# classpath:hellocucumber/varaus.feature:41&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mkayttaja on varaussivulla&amp#27;[39m                                      &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_on_varaussivulla()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mkayttaja valitsee peruttavan varauksen huoneen &amp#27;[1m""&amp#27;[22m paivalle &amp#27;[1m""&amp#27;[22m&amp#27;[39m   &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_valitsee_peruttavan_varauksen(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mvaraus on tilassa &amp#27;[1m"tulossa"&amp#27;[22m&amp#27;[39m                                      &amp#27;[90m# hellocucumber.steps.VarausSteps.varaus_on_tilassa(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mkayttaja klikkaa peruutuspainiketta&amp#27;[39m                              &amp#27;[90m# hellocucumber.steps.VarausSteps.kayttaja_klikkaa_peruutuspainiketta()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mkayttajalle naytetaan viesti &amp#27;[1m"Valitse huone ja varausajankohta"&amp#27;[22m&amp#27;[39m &amp#27;[90m# hellocucumber.steps.CommonSteps.kayttajalle_naytetaan_viesti(java.lang.String)&amp#27;[39m
 ]]></system-out>
   </testcase>
 </testsuite>

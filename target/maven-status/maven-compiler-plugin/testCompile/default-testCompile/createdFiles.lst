@@ -1,8 +1,9 @@
-hellocucumber/steps/LoginSteps.class
 hellocucumber/StepDefinitions.class
+hellocucumber/RunCucumberTest.class
+hellocucumber/LoginTest.class
+hellocucumber/steps/LoginSteps.class
 hellocucumber/steps/VarausSteps.class
 hellocucumber/VarausTest.class
 hellocucumber/steps/Kaikille.class
-hellocucumber/RunCucumberTest.class
 hellocucumber/steps/CommonSteps.class
 hellocucumber/steps/RekisterointiSteps.class
