@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VarausPalvelu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hellocucumber</a> &gt; <a href="index.source.html" class="el_package">hellocucumber</a> &gt; <span class="el_source">VarausPalvelu.java</span></div><h1>VarausPalvelu.java</h1><pre class="source lang-java linenums">package hellocucumber;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class VarausPalvelu {
+
+<span class="fc" id="L9">    private List&lt;Varaus&gt; varausLista = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L11">    public VarausPalvelu() {</span>
+<span class="fc" id="L12">        varausLista.add(new Varaus(&quot;A100&quot;, LocalDate.now().minusDays(10), &quot;Testi&quot;, &quot;t@test.fi&quot;, &quot;040&quot;));</span>
+<span class="fc" id="L13">        varausLista.add(new Varaus(&quot;A120&quot;, LocalDate.now().plusDays(2), &quot;Testi&quot;, &quot;t@test.fi&quot;, &quot;040&quot;));</span>
+<span class="fc" id="L14">        varausLista.add(new Varaus(&quot;A140&quot;, LocalDate.now(), &quot;Testi&quot;, &quot;t@test.fi&quot;, &quot;040&quot;));</span>
+<span class="fc" id="L15">    }</span>
+
+    private boolean tyhja(String s) {
+<span class="pc bpc" id="L18" title="1 of 4 branches missed.">        return s == null || s.isBlank();</span>
+    }
+
+    private String laskeTila(LocalDate aika) {
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (aika.isBefore(LocalDate.now())) return &quot;mennyt&quot;;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (aika.isEqual(LocalDate.now())) return &quot;kaynnissa&quot;;</span>
+<span class="fc" id="L24">        return &quot;tulossa&quot;;</span>
+    }
+
+    public Varaus haeVaraus(String huone, LocalDate aika) {
+<span class="fc" id="L28">        return varausLista.stream()</span>
+<span class="fc bfc" id="L29" title="All 4 branches covered.">                .filter(v -&gt; v.getHuone().equals(huone) &amp;&amp; v.getAika().equals(aika))</span>
+<span class="fc" id="L30">                .findFirst()</span>
+<span class="fc" id="L31">                .orElse(null);</span>
+    }
+
+    public String varaa(String huoneStr, String aikaStr,
+                        String nimi, String email, String puhelin) {
+
+<span class="fc bfc" id="L37" title="All 4 branches covered.">        if (tyhja(huoneStr) &amp;&amp; tyhja(aikaStr)) return &quot;Valitse huone ja varausajankohta&quot;;</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (tyhja(huoneStr)) return &quot;Valitse huone&quot;;</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if (tyhja(aikaStr)) return &quot;Valitse varausajankohta&quot;;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (tyhja(nimi)) return &quot;Lisaa varaajan nimi&quot;;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        if (tyhja(email)) return &quot;Lisaa sahkoposti&quot;;</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (tyhja(puhelin)) return &quot;Lisaa puhelinnumero&quot;;</span>
+
+<span class="fc" id="L44">        LocalDate aika = LocalDate.parse(aikaStr);</span>
+
+        // tarkista onko huone + aika jo varattu
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (haeVaraus(huoneStr, aika) != null) return &quot;Huone ei ole vapaa&quot;;</span>
+
+<span class="fc" id="L49">        varausLista.add(new Varaus(huoneStr, aika, nimi, email, puhelin));</span>
+<span class="fc" id="L50">        return &quot;Varaus onnistui&quot;;</span>
+    }
+
+    public String peru(String huoneStr, String aikaStr) {
+
+<span class="fc bfc" id="L55" title="All 4 branches covered.">        if (tyhja(huoneStr) &amp;&amp; tyhja(aikaStr)) return &quot;Valitse huone ja varausajankohta&quot;;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        if (tyhja(huoneStr)) return &quot;Valitse huone&quot;;</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (tyhja(aikaStr)) return &quot;Valitse varausajankohta&quot;;</span>
+
+<span class="fc" id="L59">        LocalDate aika = LocalDate.parse(aikaStr);</span>
+<span class="fc" id="L60">        Varaus v = haeVaraus(huoneStr, aika);</span>
+
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if (v == null) return &quot;Varausta ei loydy&quot;;</span>
+
+<span class="fc" id="L64">        String tila = laskeTila(v.getAika());</span>
+
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (&quot;tulossa&quot;.equals(tila)) {</span>
+<span class="fc" id="L67">            varausLista.remove(v);</span>
+<span class="fc" id="L68">            return &quot;Varaus peruttu onnistuneesti&quot;;</span>
+        }
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (&quot;kaynnissa&quot;.equals(tila)) return &quot;Kaynnissa olevaa varausta ei voi perua&quot;;</span>
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        if (&quot;mennyt&quot;.equals(tila)) return &quot;Mennytta varausta ei voi perua&quot;;</span>
+
+<span class="nc" id="L73">        return &quot;&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
