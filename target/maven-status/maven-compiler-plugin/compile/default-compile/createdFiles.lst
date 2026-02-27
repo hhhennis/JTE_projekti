@@ -1,3 +1,5 @@
 hellocucumber/VarausPalvelu.class
+hellocucumber/Kayttaja.class
 hellocucumber/LoginKirjautuminen.class
+hellocucumber/RekisterointiPalvelu.class
 hellocucumber/Varaus.class
