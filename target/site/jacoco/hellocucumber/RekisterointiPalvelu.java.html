@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RekisterointiPalvelu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hellocucumber</a> &gt; <a href="index.source.html" class="el_package">hellocucumber</a> &gt; <span class="el_source">RekisterointiPalvelu.java</span></div><h1>RekisterointiPalvelu.java</h1><pre class="source lang-java linenums">package hellocucumber;
+
+import java.util.HashMap;
+import java.util.Map;
+
+<span class="fc" id="L6">public class RekisterointiPalvelu {</span>
+
+<span class="fc" id="L8">    private Map&lt;String, Kayttaja&gt; kayttajat = new HashMap&lt;&gt;();</span>
+
+<span class="fc" id="L10">    private Map&lt;String, Kayttaja&gt; emailIndex = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L11">    private Map&lt;String, Kayttaja&gt; puhelinIndex = new HashMap&lt;&gt;();</span>
+
+    public String rekisteroi(String nimi, String osoite, String email, String puhelinnumero) {
+
+<span class="pc bpc" id="L15" title="1 of 4 branches missed.">        if (puhelinnumero == null || puhelinnumero.isBlank()) {</span>
+<span class="fc" id="L16">            return &quot;Tayta puhelinnumero&quot;;</span>
+        }
+
+<span class="pc bpc" id="L19" title="2 of 6 branches missed.">        if (email == null || !email.contains(&quot;@&quot;) || !email.contains(&quot;.&quot;)) {</span>
+<span class="fc" id="L20">            return &quot;Sahkopostiosoite ei kelpaa&quot;;</span>
+        }
+
+<span class="pc bpc" id="L23" title="1 of 4 branches missed.">        if (puhelinnumero.length() &gt; 15 || !puhelinnumero.matches(&quot;\\d+&quot;)) {</span>
+<span class="fc" id="L24">            return &quot;Puhelinnumero ei kelpaa&quot;;</span>
+        }
+
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (emailIndex.containsKey(email)) {</span>
+<span class="fc" id="L28">            return &quot;Sahkopostiosoite on jo kaytossa&quot;;</span>
+        }
+
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (puhelinIndex.containsKey(puhelinnumero)) {</span>
+<span class="fc" id="L32">            return &quot;Puhelinnumero on jo kaytossa&quot;;</span>
+        }
+
+<span class="fc" id="L35">        Kayttaja k = new Kayttaja(nimi, osoite, email, puhelinnumero);</span>
+<span class="fc" id="L36">        emailIndex.put(email, k);</span>
+<span class="fc" id="L37">        puhelinIndex.put(puhelinnumero, k);</span>
+
+<span class="fc" id="L39">        return &quot;Rekisteroityminen onnistui&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

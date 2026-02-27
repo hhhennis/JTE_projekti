@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RekisterointiTest {
 
-
     private RekisterointiPalvelu palvelu;
 
     @BeforeEach
@@ -100,4 +99,5 @@ public class RekisterointiTest {
 
         assertEquals("Puhelinnumero on jo kaytossa", tulos);
     }
+
 }

@@ -1,1 +1,11 @@
+hellocucumber/StepDefinitions.class
+hellocucumber/RekisterointiTest.class
+hellocucumber/RunCucumberTest.class
 hellocucumber/LoginTest.class
+hellocucumber/steps/RekisterointiSteps$RekisteriTiedot.class
+hellocucumber/steps/LoginSteps.class
+hellocucumber/steps/VarausSteps.class
+hellocucumber/VarausTest.class
+hellocucumber/steps/Kaikille.class
+hellocucumber/steps/CommonSteps.class
+hellocucumber/steps/RekisterointiSteps.class
