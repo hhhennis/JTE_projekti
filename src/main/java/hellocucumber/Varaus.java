@@ -20,7 +20,4 @@ public class Varaus {
 
     public String getHuone() { return huone; }
     public LocalDate getAika() { return aika; }
-    public String getNimi() { return nimi; }
-    public String getEmail() { return email; }
-    public String getPuhelin() { return puhelin; }
-}
+    }
